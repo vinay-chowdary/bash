@@ -5,5 +5,5 @@ These are stored under practice directory in this repo.
 
 file name suggests the concept for which it is coded.
 
-projects : these are these are the scripts that i made to put all the concepts i had learnt together.
-these projects are very simple and they are mostly begining level projects
+projects : these are the scripts that i made to put all the concepts that i had learnt, together.
+these projects are mostly begining level projects
