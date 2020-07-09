@@ -1,0 +1,20 @@
+# -c no .of characters tp cut. -f : fields , -b : bytes , -d : delimiter 
+1. cut -c 1-4 -f 2-9 -b -3 -d "\t" fileName.extension
+
+# tr command : translate or delete characters
+2.  tr [options]... SET1 SET2
+    tr "()" "{}" --> replace () with {}
+    tr -d [[:lower:]] delete all lower characters
+    tr -s " "  --> squeze multiple spaces into single space
+
+# head and tail
+3.  head -c 20 fileName.extension --> display first 20 charecters
+    head -n 20 fileName.extension --> first 20 lines in the file
+4.  tail -c 20 fileName.extension --> display last 20 charecters
+    tail -n 20 fileName.extension --> last 20 lines in the file
+
+
+# sort command
+5. sort -nr -k2 -t$'\t' filename.extension
+#  -n : numeric sort , -r : reverse ,-k : key(field) on which it should be sorted 
+#  -t : similar to delimiter
