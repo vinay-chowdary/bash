@@ -18,3 +18,6 @@
 5. sort -nr -k2 -t$'\t' filename.extension
 #  -n : numeric sort , -r : reverse ,-k : key(field) on which it should be sorted 
 #  -t : similar to delimiter
+
+
+6.awk
