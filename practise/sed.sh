@@ -60,5 +60,8 @@ sed -e '/#/d' -e '/^$/d' fileName
 
 sed '2,4 s/document file/file/' fileName
 
+# delete a particular line in a file
+sed '2d' test.txt
+
 rm test.txt
 #end
