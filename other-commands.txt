@@ -19,5 +19,8 @@
 #  -n : numeric sort , -r : reverse ,-k : key(field) on which it should be sorted 
 #  -t : similar to delimiter
 
+6.uniq
 
-6.awk
+7.paste
+
+8.awk
