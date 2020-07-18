@@ -14,6 +14,6 @@ fi
 
 
 # token is personal access token provided by github to access account by github api
-curl -H "Authorization: token $TOKEN" https://api.github.com/user/repo -d '{\"name\":\"${REPONAME}\"}'
+curl -H "Authorization: token $TOKEN" https://api.github.com/user/repos -d "{\"name\":\"${REPONAME}\"}"
 
 #end
