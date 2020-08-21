@@ -1,0 +1,23 @@
+#! /bin/bash
+#purpose:delete a git hub repository suing its API
+#date of creation :07/28/20
+#author : vinay chowdary
+#start
+
+
+DELETE_REPOS=($@)
+
+if test -z $DELETE_REPOS
+then
+    echo "enter repo name to delete"
+    exit
+fi
+
+for DELETE_REPO in $@
+do
+echo "deleting.. ${DELETE_REPO}"
+curl -X DELETE -H "Authorization: token $TOKEN" https://api.github.com/repos/vinay-chowdary/$DELETE_REPO
+done
+
+
+#end
