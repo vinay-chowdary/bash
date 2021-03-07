@@ -1,0 +1,22 @@
+#! /bin/bash
+
+
+test -z $1 && echo "provide files as arguments" && exit 1
+
+FILES=("$@")
+for FILE in ${FILES[@]}
+do
+    if [ -f $FILE ]
+    then
+        echo
+        echo $FILE ':'
+        chars=`wc -m $FILE`
+        words=`wc -w $FILE`
+        echo "number of characters = $chars"
+        echo "number of words = $words"
+        
+    else
+        echo "$FILE : no such file found"
+        continue
+    fi
+done
