@@ -1,0 +1,70 @@
+#! /bin/bash
+
+# check whether number is armstrong or not 
+function armstrong(){
+    local NUM=$1
+    local SUM=0
+    while [ $NUM -ne 0 ]
+    do
+        local DIGIT=`expr $NUM % 10`
+        local CUBE=`expr $DIGIT \* $DIGIT \* $DIGIT`
+        SUM=`expr $SUM \+ $CUBE`
+        NUM=`expr $NUM / 10`
+    done
+    if [ $SUM -eq $1 ]
+    then
+        echo "$1 is an armstrong number"
+    else
+        echo "$1 is not an armstrong number"
+    fi
+}
+
+# check for palindrome
+function palindrome()
+{
+    local NUM=$1
+    local REVERSE=0
+    while [ $NUM -ne 0 ]
+    do
+        local DIGIT=`expr $NUM \% 10`
+        REVERSE=`expr $REVERSE \* 10 + $DIGIT`
+        NUM=`expr $NUM \/ 10`
+    done
+    if [ $REVERSE -eq $1 ]
+    then
+        echo $1 'is a palindrome'
+    else
+        echo $1 'is not a palindrome'
+    fi
+}
+
+option=$1
+shift
+numbers=("$@")
+if [ ${#numbers[@]} -eq 0 ]
+then
+    echo "no numbers are provided"
+    exit
+fi
+case $option in
+    
+    -arm )
+
+        for num in ${numbers[@]}
+        do
+            armstrong $num
+        done
+        ;;
+
+    -pal ) 
+
+        for num in ${numbers[@]}
+        do
+            palindrome $num
+        done
+        ;;
+    
+    * )
+
+        echo "enter valid option -arm for armstrong, -pal for palindrome check"
+esac
